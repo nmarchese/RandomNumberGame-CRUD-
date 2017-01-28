@@ -1,0 +1,51 @@
+body {
+	background-color: #5e2e1d;
+	background-image: url("./background1.jpg");
+	background-size: 100%;
+}
+
+.content {
+	margin: 5%;
+	background-color: rgba(30,30,30,.7);
+	background-size: cover;
+	padding: 5%;
+	color: #adb5bf;
+}
+
+h2, h3 {
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	border-collapse: collapse;
+}
+.table {
+	display: flex;
+	justify-content: center;
+	min-height: 22vh;
+}
+
+th, td {
+	padding: 1vh;
+	text-allign: left;
+	border-bottom: 1px solid #999;
+}
+
+tr:FIRST-CHILD {
+	width: 10vw;
+}
+
+form {
+	display: flex;
+	justify-content: center;
+}
+
+.addPlayerForm > input {
+	margin-left: .3vw;
+	margin-right: 1vw;
+}
+
+form[type="password"] {
+	width: ;
+}
