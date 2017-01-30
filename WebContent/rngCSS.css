@@ -1,7 +1,12 @@
 body {
 	background-color: #5e2e1d;
-	background-image: url("./background1.jpg");
-	background-size: 100%;
+	/* background-image: url("./background1.jpg"); */
+/* 	background-size: 100%; */
+	background: url("./background1.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .content {

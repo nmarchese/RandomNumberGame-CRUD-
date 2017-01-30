@@ -47,11 +47,22 @@ public class PlayerController {
 	}
 	
 	@RequestMapping(path="NewPlayer.do", method=RequestMethod.POST)
-	public String updatePlayers(Player player, HttpSession session) {
-		playerDAO.addPlayer(player);
+	public String updatePlayers(Player player, String number, HttpSession session) {
+		int num;
+		try {
+			num = Integer.parseInt(number);
+			if (num < 1) {
+				num = 1;
+			} else if (num > 100) {
+				num = 100;
+			}
+		} catch (Exception e) {
+			return "error";
+		}
 		if (player.getNumber() < 0) {
 			return "error";
 		}
+		playerDAO.addPlayer(player);
 		session.setAttribute("players", playerDAO.getPlayers());
 		session.setAttribute("playerCount", playerDAO.getPlayers().size());
 		return "game";
