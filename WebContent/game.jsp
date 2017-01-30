@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./rngCSS.css">
-<title>Random Number Game</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Russo+One" rel="stylesheet"><title>Random Number Game</title>
 </head>
 <body>
 <div class="content">
@@ -38,9 +38,14 @@
 		Number: <input type="password" name="number"/>
 		<input type="submit" value="Add Player"/>
 	</form>
-	<br><br>
+	<br>
 	<form action="play.do" method="POST">
+	<c:if test="${playerCount >= 2}">
 		<input type="submit" value="Play"/>
+	</c:if>
+	<c:if test="${playerCount < 2 || playerCount == null}">
+		<input type="button" value="Play" disabled/>
+	</c:if>
 	</form>
 </div>
 </body>

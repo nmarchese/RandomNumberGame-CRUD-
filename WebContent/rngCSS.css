@@ -10,35 +10,57 @@ body {
 	background-size: cover;
 	padding: 5%;
 	color: #adb5bf;
+	font-family: 'Roboto Slab', serif;
 }
 
+.space {
+	color: rgba(0,0,0,0);
+}
+
+span.header {
+	font-weight: 900;
+}
+
+h2 {
+	font-size: 200%;
+}
+h3 {
+	color: #c6cfdc;
+}
 h2, h3 {
+	font-family: 'Russo One', sans-serif;
+}
+h4 {
+	font-size: 120%;
+	margin-bottom: 0;
+}
+h2, h3, h4, p, .table, .table2, form, span, .header {
+	display: -webkit-box;
+	display: -ms-flexbox;
 	display: flex;
-	justify-content: center;
+	-webkit-box-pack: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
 }
 
 table {
 	border-collapse: collapse;
 }
-.table {
-	display: flex;
-	justify-content: center;
+.table, .table2 {
 	min-height: 22vh;
 }
 
 th, td {
 	padding: 1vh;
-	text-allign: left;
+	text-align: left;
 	border-bottom: 1px solid #999;
+}
+.table2 > th, td {
+	text-align: center;
 }
 
 tr:FIRST-CHILD {
 	width: 10vw;
-}
-
-form {
-	display: flex;
-	justify-content: center;
 }
 
 .addPlayerForm > input {
@@ -46,6 +68,32 @@ form {
 	margin-right: 1vw;
 }
 
-form[type="password"] {
-	width: ;
+input[type="text"] {
+	width: 6vw;
+}
+
+input[type="password"] {
+	width: 3vw;
+}
+
+input[type="button"] {
+	background-color: rgba(120,120,120,.6);
+	opacity: 0.5;
+}
+button, input[type="submit"], input[type="button"] {
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: #ddd;
+ 	box-shadow: 0 2px #666;
+ 	outline: none;
+}
+button:hover, input[type="submit"]:hover {
+	border: 1px solid black;
+	background-color: #999;
+}
+button:active, input[type="submit"]:active {
+	background-color: #888;
+	box-shadow: 0 1px #333;
+	-webkit-transform: translateY(1px);
+	        transform: translateY(1px);
 }

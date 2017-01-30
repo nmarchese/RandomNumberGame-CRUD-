@@ -5,6 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./rngCSS.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Russo+One" rel="stylesheet">
 <title>Random Number Game</title>
 </head>
 <body>

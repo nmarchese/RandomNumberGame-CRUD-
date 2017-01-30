@@ -41,6 +41,7 @@ public class PlayerController {
 		} else if (removeName != null) {
 			playerDAO.removePlayer(removeName);
 		}
+		session.setAttribute("playerCount", playerDAO.getPlayers().size());
 		session.setAttribute("players", playerDAO.getPlayers());
 		return "game";
 	}
@@ -52,6 +53,7 @@ public class PlayerController {
 			return "error";
 		}
 		session.setAttribute("players", playerDAO.getPlayers());
+		session.setAttribute("playerCount", playerDAO.getPlayers().size());
 		return "game";
 	}
 	

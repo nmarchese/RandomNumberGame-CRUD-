@@ -6,13 +6,12 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./rngCSS.css">
-<title>Random Number Game</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Russo+One" rel="stylesheet"><title>Random Number Game</title>
 </head>
 <body>
 <div class="content">
 	<h2>Results</h2>
-	<p><span class="header"> Random Number: </span><c:out value="${randomNumber}"/> </p>
-	<br>
+	<h3><span class="header"> Random Number:<span class="space">-</span></span><c:out value="${randomNumber}"/> </h3>
 	<c:if test="${tie}">
 		<h3>Tie:</h3>
 		<p>
@@ -30,17 +29,16 @@
 		<br>
 	</c:if>
 	<c:if test="${!tie}">
-		<p><span class="header"> Winner: </span><c:out value="${winner.name}"/> </p>
-		<p><span class="header"> Number: </span><c:out value="${winner.number}"/> </p>
-		<p><span class="header"> Distance Off: </span><c:out value="${winnerDist}"/> </p>
+		<h4><span class="header"> Winner:<span class="space">-</span></span></span><c:out value="${winner.name}"/> </h4>
+		<p><span class="header"> Number:<span class="space">-</span></span></span><c:out value="${winner.number}"/> </p>
+		<p><span class="header"> Distance Off:<span class="space">-</span></span></span><c:out value="${winnerDist}"/> </p>
 	</c:if>
+	<h4><span class="header"> Runner Up:<span class="space">-</span></span></span><c:out value="${runnerUp.name}"/> </h4>
+	<p><span class="header"> Number:<span class="space">-</span></span></span><c:out value="${runnerUp.number}"/> </p>
+	<p><span class="header"> Distance Off:<span class="space">-</span></span></span><c:out value="${runnerUpDist}"/> </p>
 	<br>
-	<p><span class="header"> Runner Up: </span><c:out value="${runnerUp.name}"/> </p>
-	<p><span class="header"> Number: </span><c:out value="${runnerUp.number}"/> </p>
-	<p><span class="header"> Distance Off: </span><c:out value="${runnerUpDist}"/> </p>
-	<br><br>
-	<table>
-		<thead class="header"> Players: </thead>
+	<h4><span class="header"> Players: </span></h4>
+	<table class="table2">
 		<tr>
 			<th>Name</th><th>Number</th><th>Total Wins</th>
 		</tr>
@@ -52,6 +50,7 @@
 			</tr>
 		</c:forEach>
 	</table>
+	<br>
 	<form action="game.jsp" method="POST">
 		<input type="submit" value="Return to Players Screen"/>
 	</form>

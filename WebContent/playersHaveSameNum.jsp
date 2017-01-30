@@ -6,18 +6,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" type="text/css" href="./rngCSS.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Russo+One" rel="stylesheet">
 <title>Random Number Game</title>
 </head>
 <body>
 <div class="content">
 	<h2>Error:</h2>
-	Players: 
+	<p>Players: 
 	<c:forEach var="player" items="${samePlayers}">
 		<c:out value="${player.name}"/>, 
 	</c:forEach>
-	chose the same number.
+	chose the same number.</p>
+	<p>Each of their numbers have been reset to 0, please reset each on the previous screen before continuing.</p>
 	<br>
-	Each of their numbers have been reset to 0, please reset each on the previous screen before continuing.
 	<form action="game.jsp" method="POST">
 		<input type="submit" value="Return"/>
 	</form>
