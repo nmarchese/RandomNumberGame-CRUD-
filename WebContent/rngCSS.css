@@ -22,11 +22,28 @@ body {
 	color: rgba(0,0,0,0);
 }
 
+.instructions {
+	text-decoration: none;
+	position: absolute;
+	margin-left: 8vw;
+	margin-top: 5vh;
+	color: #adb5bf;
+	font-family: 'Roboto Slab', serif;
+	border-bottom: 1px solid;
+	transition-duration: 0.3s;
+	transition-property: transform;
+}
+.instructions:hover {
+	transform: scale(1.05);
+	color: #e0eaf9;
+}
+
 span.header {
 	font-weight: 900;
 }
 
 h2 {
+	margin-top: 0;
 	font-size: 200%;
 }
 h3 {

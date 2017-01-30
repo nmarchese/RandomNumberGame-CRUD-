@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Russo+One" rel="stylesheet"><title>Random Number Game</title>
 </head>
 <body>
+<a class="instructions" href="instructions.jsp">Instructions</a>
 <div class="content">
 	<h2>Random Number Game</h2>
 	<h3>Players:</h3>
