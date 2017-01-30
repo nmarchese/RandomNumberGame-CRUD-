@@ -29,13 +29,13 @@
 		<br>
 	</c:if>
 	<c:if test="${!tie}">
-		<h4><span class="header"> Winner:<span class="space">-</span></span></span><c:out value="${winner.name}"/> </h4>
-		<p><span class="header"> Number:<span class="space">-</span></span></span><c:out value="${winner.number}"/> </p>
-		<p><span class="header"> Distance Off:<span class="space">-</span></span></span><c:out value="${winnerDist}"/> </p>
+		<h4><span class="header"> Winner:<span class="space">-</span></span><c:out value="${winner.name}"/> </h4>
+		<p><span class="header"> Number:<span class="space">-</span></span><c:out value="${winner.number}"/> </p>
+		<p><span class="header"> Distance Off:<span class="space">-</span></span><c:out value="${winnerDist}"/> </p>
 	</c:if>
-	<h4><span class="header"> Runner Up:<span class="space">-</span></span></span><c:out value="${runnerUp.name}"/> </h4>
-	<p><span class="header"> Number:<span class="space">-</span></span></span><c:out value="${runnerUp.number}"/> </p>
-	<p><span class="header"> Distance Off:<span class="space">-</span></span></span><c:out value="${runnerUpDist}"/> </p>
+	<h4><span class="header"> Runner Up:<span class="space">-</span></span><c:out value="${runnerUp.name}"/> </h4>
+	<p><span class="header"> Number:<span class="space">-</span></span><c:out value="${runnerUp.number}"/> </p>
+	<p><span class="header"> Distance Off:<span class="space">-</span></span><c:out value="${runnerUpDist}"/> </p>
 	<br>
 	<h4><span class="header"> Players: </span></h4>
 	<table class="table2">
@@ -50,7 +50,6 @@
 			</tr>
 		</c:forEach>
 	</table>
-	<br>
 	<form action="game.jsp" method="POST">
 		<input type="submit" value="Return to Players Screen"/>
 	</form>
